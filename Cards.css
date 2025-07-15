@@ -1,0 +1,73 @@
+
+
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto; /* centers the grid */
+  padding: 40px 20px; /* reduce side padding */
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ✅ Make blog-content a column layout and push button down */
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 25px;
+}
+
+.blog-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.blog-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  flex-grow: 1; /* makes p take extra space and push button down */
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 2px solid #561f00;
+  color: #561f00;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-self: flex-start; /* optional: keeps button aligned left */
+}
+
+.read-more:hover {
+  background-color: #561f00;
+  color: white;
+}
+
